@@ -1,589 +1,1004 @@
+这次为你设计一个**风格极具震慑力、高反差赛博警卫美学（Cyber Cyberpunk & Zero-Trust Grid）**的全新网页——**「AegisGrid (宙斯盾网) | 下一代云原生零信任安全与自主威胁免疫平台」**。
+
+---
+
+### 🎨 区别于前几个网页的独特亮点
+* **全新行业领域**：切入**企业级网络安全、云原生 eBPF 内核防御与全球自适应威胁免疫（Zero-Trust Cloud Defense & Threat Hunting）**。
+* **全新色系（Laser Crimson & Frost Cyan）**：采用**深邃冷夜深空底色（`#050811`）**，主色调采用**赛博激光洋红玫瑰（Cyber Rose `#f43f5e`）**，辅以**冰霜电光蓝（Frost Cyan `#38bdf8`）**，呈现出一种强烈的警惕感、防御不可侵犯的厚重科技质感。
+* **Hero 实时安全雷达终端（Interactive Threat Radar）**：右侧展示了一座**内核级安全雷达监测中枢**，动态模拟正在拦截的峰值流量（`4.2 Tbps DDoS blocked`）、eBPF 探针状态与后量子加密隧道。
+* **完整架构**：包含顶部高危威胁警报条、雷达终端、6 宫格深度内核防护特性、4 项防御硬核指标、全球 CISO 推荐轮播、支持月/年付 8 折切换的阶梯定价器、高光防御行动横幅及专业合规页脚。
+
+---
+
+### 完整 HTML 代码
+
+你可以将以下代码保存为 `.html` 文件（例如 `aegisgrid.html`），双击即可在任何浏览器中打开预览：
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeFlow | Visual Development Platform</title>
+    <title>AegisGrid | Autonomous Zero-Trust Cloud Immune System</title>
+    <!-- Icons & Modern Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-void: #050811;
+            --bg-panel: rgba(11, 17, 33, 0.78);
+            --bg-panel-hover: rgba(18, 28, 54, 0.88);
+            --border-dim: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(244, 63, 94, 0.45);
+            --neon-rose: #f43f5e;
+            --neon-cyan: #38bdf8;
+            --neon-gradient: linear-gradient(135deg, #f43f5e 0%, #fb7185 50%, #38bdf8 100%);
+            --text-high: #f8fafc;
+            --text-mid: #94a3b8;
+            --text-low: #64748b;
+            --font-tactical: 'Chakra Petch', sans-serif;
+            --font-main: 'Plus Jakarta Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: var(--font-main);
+            background-color: var(--bg-void);
+            color: var(--text-high);
             line-height: 1.6;
-            color: #333;
-            background-color: #f9fbfd;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 15%, rgba(244, 63, 94, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(56, 189, 248, 0.07) 0%, transparent 45%);
+            background-attachment: fixed;
         }
-        
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
+
         .container {
             width: 100%;
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
-        /* Header & Navigation */
+
+        .neon-text {
+            background: var(--neon-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Top Security Alert Banner */
+        .threat-ticker {
+            background: #0b1120;
+            border-bottom: 1px solid rgba(244, 63, 94, 0.3);
+            color: #fca5a5;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .threat-ticker strong {
+            color: #fff;
+            background: rgba(244, 63, 94, 0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(244, 63, 94, 0.4);
+        }
+
+        /* Header Navigation */
         header {
-            background-color: #fff;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            position: fixed;
+            position: sticky;
+            top: 0;
+            left: 0;
             width: 100%;
             z-index: 1000;
+            background: rgba(5, 8, 17, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-dim);
+            transition: all 0.3s;
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            height: 76px;
         }
-        
-        .logo {
+
+        .brand-link {
             display: flex;
             align-items: center;
+            gap: 12px;
+            text-decoration: none;
         }
-        
-        .logo-icon {
-            color: #4361ee;
-            font-size: 28px;
-            margin-right: 10px;
+
+        .brand-crest {
+            width: 40px;
+            height: 40px;
+            background: var(--neon-gradient);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #050811;
+            font-size: 20px;
+            box-shadow: 0 0 20px rgba(244, 63, 94, 0.4);
         }
-        
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
+
+        .brand-name {
+            font-family: var(--font-tactical);
             font-size: 24px;
             font-weight: 700;
-            color: #333;
+            letter-spacing: 0.5px;
+            color: #fff;
+            text-transform: uppercase;
         }
-        
-        .logo-text span {
-            color: #4361ee;
+
+        .brand-name span {
+            color: var(--neon-rose);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
+            gap: 32px;
         }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
+
         .nav-links a {
             text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #4361ee;
-        }
-        
-        .cta-button {
-            background-color: #4361ee;
-            color: white;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 6px;
+            color: var(--text-mid);
+            font-size: 14px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: var(--font-tactical);
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-crimson {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--neon-gradient);
+            color: #050811;
+            font-family: var(--font-tactical);
+            font-weight: 700;
+            font-size: 14px;
+            padding: 11px 24px;
+            border-radius: 6px;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 20px rgba(244, 63, 94, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        
-        .cta-button:hover {
-            background-color: #3a56d4;
+
+        .btn-crimson:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(244, 63, 94, 0.55);
         }
-        
-        .mobile-menu-btn {
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.04);
+            color: #fff;
+            font-family: var(--font-tactical);
+            font-weight: 600;
+            font-size: 14px;
+            padding: 11px 22px;
+            border-radius: 6px;
+            border: 1px solid var(--border-dim);
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .mobile-trigger {
             display: none;
             background: none;
             border: none;
-            font-size: 24px;
-            color: #333;
+            color: #fff;
+            font-size: 22px;
             cursor: pointer;
         }
-        
+
         /* Hero Section */
         .hero {
-            padding: 150px 0 100px;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f9fbfd 100%);
+            padding: 140px 0 100px;
         }
-        
-        .hero-content {
-            display: flex;
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
             align-items: center;
-            justify-content: space-between;
+            gap: 50px;
         }
-        
-        .hero-text {
-            flex: 1;
-            padding-right: 40px;
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            background: rgba(244, 63, 94, 0.1);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            border-radius: 9999px;
+            font-family: var(--font-mono);
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--neon-rose);
+            margin-bottom: 24px;
         }
-        
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #222;
+
+        .pulse-light {
+            width: 8px;
+            height: 8px;
+            background: var(--neon-rose);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-rose);
+            animation: pulse-ring 1.5s infinite;
         }
-        
-        .hero-text h1 span {
-            color: #4361ee;
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.3); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
         }
-        
-        .hero-text p {
+
+        .hero-grid h1 {
+            font-family: var(--font-tactical);
+            font-size: 54px;
+            font-weight: 800;
+            line-height: 1.12;
+            letter-spacing: -1px;
+            margin-bottom: 22px;
+            text-transform: uppercase;
+        }
+
+        .hero-grid p {
             font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
-            max-width: 600px;
+            color: var(--text-mid);
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 580px;
         }
-        
+
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 16px;
+            flex-wrap: wrap;
         }
-        
-        .secondary-button {
-            background-color: white;
-            color: #4361ee;
-            border: 2px solid #4361ee;
-            padding: 12px 28px;
-            border-radius: 6px;
-            font-weight: 600;
+
+        /* Hero Tactical Security Terminal */
+        .radar-terminal {
+            background: var(--bg-panel);
+            backdrop-filter: blur(14px);
+            border: 1px solid var(--border-dim);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(244, 63, 94, 0.1);
+            position: relative;
+        }
+
+        .terminal-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-dim);
+            padding-bottom: 14px;
+            margin-bottom: 18px;
+        }
+
+        .terminal-label {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--neon-cyan);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .incident-card {
+            background: rgba(244, 63, 94, 0.05);
+            border: 1px solid rgba(244, 63, 94, 0.25);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+            font-size: 12px;
+        }
+
+        .incident-tag {
+            background: var(--neon-rose);
+            color: #050811;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .terminal-log-feed {
+            background: #020409;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: var(--font-mono);
+            font-size: 11px;
+            color: var(--text-low);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .log-line {
+            display: flex;
+            gap: 8px;
+        }
+
+        .log-success { color: #4ade80; }
+        .log-warn { color: #fbbf24; }
+        .log-cyan { color: var(--neon-cyan); }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-tactical);
+            font-size: 40px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .section-header p {
+            color: var(--text-mid);
+            max-width: 660px;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .feature-card {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-dim);
+            border-radius: 14px;
+            padding: 34px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-glow);
+            background: var(--bg-panel-hover);
+        }
+
+        .feature-icon-shield {
+            width: 52px;
+            height: 52px;
+            background: rgba(244, 63, 94, 0.08);
+            border: 1px solid rgba(244, 63, 94, 0.25);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--neon-rose);
+            font-size: 22px;
+            margin-bottom: 22px;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-tactical);
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .feature-card p {
+            color: var(--text-mid);
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        /* Metrics / Benchmarks Section */
+        .metrics {
+            padding: 80px 0;
+            background: rgba(11, 17, 33, 0.6);
+            border-top: 1px solid var(--border-dim);
+            border-bottom: 1px solid var(--border-dim);
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .metric-cell {
+            text-align: center;
+            padding: 24px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.015);
+            border: 1px solid var(--border-dim);
+        }
+
+        .metric-value {
+            font-size: 46px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            margin-bottom: 6px;
+        }
+
+        .metric-cell h4 {
+            font-family: var(--font-tactical);
+            font-size: 17px;
+            color: #fff;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .metric-cell p {
+            color: var(--text-low);
+            font-size: 13px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+        }
+
+        .testimonial-deck {
+            max-width: 840px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-box {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-dim);
+            border-radius: 18px;
+            padding: 48px;
+            text-align: center;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 20px 40px -15px rgba(0,0,0,0.6);
+        }
+
+        .quote-icon {
+            font-size: 34px;
+            color: var(--neon-rose);
+            opacity: 0.35;
+            margin-bottom: 20px;
+        }
+
+        .quote-quote {
+            font-size: 21px;
+            line-height: 1.7;
+            color: #f1f5f9;
+            margin-bottom: 34px;
+        }
+
+        .officer-profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .officer-badge {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--neon-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #050811;
+            font-size: 18px;
+        }
+
+        .officer-info h5 {
+            font-family: var(--font-tactical);
+            font-size: 18px;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        .officer-info span {
+            font-size: 13px;
+            color: var(--text-low);
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .arrow-button {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-dim);
+            color: #fff;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .arrow-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .dots-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot-node {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
             cursor: pointer;
             transition: all 0.3s;
         }
-        
-        .secondary-button:hover {
-            background-color: #f0f4ff;
+
+        .dot-node.active {
+            width: 26px;
+            border-radius: 999px;
+            background: var(--neon-rose);
         }
-        
-        .hero-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
-        }
-        
-        /* Features Section */
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: #222;
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: #666;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .features {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-        
-        .feature-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .feature-icon {
-            background-color: #eef2ff;
-            color: #4361ee;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        
-        .feature-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        .feature-card p {
-            color: #666;
-        }
-        
-        /* Benefits Section */
-        .benefits {
-            padding: 100px 0;
-            background-color: #f0f4ff;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .benefit-item {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .benefit-icon {
-            color: #4361ee;
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        
-        .benefit-item h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-        
-        .benefit-item p {
-            color: #666;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            background-color: white;
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .testimonial {
-            background: #f9fbfd;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .testimonial-text {
-            font-size: 18px;
-            font-style: italic;
-            margin-bottom: 30px;
-            color: #555;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ddd;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            color: #4361ee;
-            font-size: 24px;
-        }
-        
-        .author-info h4 {
-            font-size: 18px;
-            margin-bottom: 5px;
-        }
-        
-        .author-info p {
-            color: #777;
-            font-size: 14px;
-        }
-        
+
         /* Pricing Section */
         .pricing {
             padding: 100px 0;
-            background-color: #f9fbfd;
         }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 10px;
-            padding: 40px 30px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .pricing-card.featured {
-            border-top: 5px solid #4361ee;
-            transform: scale(1.05);
-            position: relative;
-        }
-        
-        .featured-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #4361ee;
-            color: white;
-            padding: 5px 20px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
-        
-        .plan-name {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .plan-price {
-            font-size: 48px;
-            font-weight: 700;
-            color: #4361ee;
-            margin-bottom: 20px;
-        }
-        
-        .plan-price span {
-            font-size: 16px;
-            color: #777;
-        }
-        
-        .plan-features {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .plan-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            color: #555;
-        }
-        
-        .plan-features li:last-child {
-            border-bottom: none;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #4361ee 0%, #3a56d4 100%);
-            text-align: center;
-            color: white;
-        }
-        
-        .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .cta-section p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            opacity: 0.9;
-        }
-        
-        .cta-section .cta-button {
-            background-color: white;
-            color: #4361ee;
-            font-size: 16px;
-            padding: 15px 40px;
-        }
-        
-        .cta-section .cta-button:hover {
-            background-color: #f0f4ff;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #222;
-            color: #ccc;
-            padding: 70px 0 20px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+
+        .billing-toggle-shell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
             margin-bottom: 50px;
         }
-        
-        .footer-column h3 {
-            font-size: 20px;
-            color: white;
-            margin-bottom: 25px;
+
+        .billing-toggle-shell span {
+            font-size: 14px;
+            font-family: var(--font-tactical);
+            font-weight: 600;
+            color: var(--text-low);
+            text-transform: uppercase;
         }
-        
-        .footer-links {
+
+        .billing-toggle-shell span.active {
+            color: #fff;
+        }
+
+        .toggle-switch-box {
+            width: 56px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+            padding: 3px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .toggle-slider {
+            width: 24px;
+            height: 24px;
+            background: var(--neon-rose);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .toggle-switch-box.annual .toggle-slider {
+            transform: translateX(26px);
+        }
+
+        .discount-label {
+            background: rgba(244, 63, 94, 0.15);
+            color: var(--neon-rose);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(244, 63, 94, 0.3);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .pricing-tier {
+            background: var(--bg-panel);
+            border: 1px solid var(--border-dim);
+            border-radius: 16px;
+            padding: 42px 32px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-tier.featured {
+            border-color: rgba(244, 63, 94, 0.6);
+            box-shadow: 0 0 35px rgba(244, 63, 94, 0.15);
+            background: linear-gradient(180deg, rgba(24, 15, 28, 0.8) 0%, rgba(11, 17, 33, 0.8) 100%);
+            transform: scale(1.03);
+        }
+
+        .hot-shield-tag {
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--neon-gradient);
+            color: #050811;
+            font-family: var(--font-tactical);
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 16px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-title {
+            font-family: var(--font-tactical);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .tier-purpose {
+            font-size: 14px;
+            color: var(--text-low);
+            margin-bottom: 24px;
+            min-height: 42px;
+        }
+
+        .tier-price-box {
+            margin-bottom: 28px;
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+        }
+
+        .tier-amount {
+            font-size: 46px;
+            font-weight: 800;
+            font-family: var(--font-mono);
+            color: #fff;
+        }
+
+        .tier-period {
+            color: var(--text-low);
+            font-size: 14px;
+        }
+
+        .tier-features {
+            list-style: none;
+            margin-bottom: 36px;
+            flex-grow: 1;
+        }
+
+        .tier-features li {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tier-features li i {
+            color: var(--neon-rose);
+            font-size: 14px;
+        }
+
+        /* Banner CTA */
+        .cta-shield-banner {
+            padding: 90px 0;
+            margin: 60px 0 100px;
+            background: linear-gradient(135deg, rgba(244, 63, 94, 0.1) 0%, rgba(56, 189, 248, 0.05) 100%);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(244, 63, 94, 0.08);
+        }
+
+        .cta-shield-banner h2 {
+            font-family: var(--font-tactical);
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+
+        .cta-shield-banner p {
+            color: var(--text-mid);
+            font-size: 18px;
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-dim);
+            background: #03050a;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 48px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand p {
+            color: var(--text-low);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-top: 16px;
+            max-width: 320px;
+        }
+
+        .footer-nav-col h4 {
+            font-family: var(--font-tactical);
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-nav-list {
             list-style: none;
         }
-        
-        .footer-links li {
+
+        .footer-nav-list li {
             margin-bottom: 12px;
         }
-        
-        .footer-links a {
-            color: #aaa;
+
+        .footer-nav-list a {
+            color: var(--text-low);
             text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #4361ee;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #444;
             font-size: 14px;
-            color: #888;
+            transition: color 0.2s;
         }
-        
-        /* Responsive Design */
+
+        .footer-nav-list a:hover {
+            color: var(--neon-rose);
+        }
+
+        .footer-closing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 28px;
+            border-top: 1px solid var(--border-dim);
+            font-size: 13px;
+            color: var(--text-low);
+            font-family: var(--font-mono);
+        }
+
+        /* Toast Component */
+        .toast-terminal {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(11, 17, 33, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--neon-rose);
+            color: #fff;
+            padding: 14px 22px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            pointer-events: none;
+            z-index: 9999;
+            font-family: var(--font-mono);
+        }
+
+        .toast-terminal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Breakpoints */
         @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column;
-            }
-            
-            .hero-text {
-                padding-right: 0;
-                margin-bottom: 50px;
+            .hero-grid {
+                grid-template-columns: 1fr;
                 text-align: center;
             }
-            
-            .hero-text p {
-                margin: 0 auto 30px;
+
+            .hero-grid p {
+                margin: 0 auto 36px;
             }
-            
-            .pricing-card.featured {
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .pricing-tier.featured {
                 transform: none;
             }
-            
-            .pricing-card.featured:hover {
-                transform: translateY(-10px);
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-        
+
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-links, .nav-controls .btn-crimson {
                 display: none;
             }
-            
-            .mobile-menu-btn {
+
+            .mobile-trigger {
                 display: block;
             }
-            
-            .hero-text h1 {
-                font-size: 36px;
-            }
-            
-            .section-title h2 {
-                font-size: 30px;
-            }
-            
-            .hero-buttons {
+
+            .nav-links.mobile-open {
+                display: flex;
                 flex-direction: column;
-                align-items: center;
-            }
-            
-            .hero-buttons button {
+                position: absolute;
+                top: 76px;
+                left: 0;
                 width: 100%;
-                max-width: 300px;
+                background: #050811;
+                padding: 24px;
+                border-bottom: 1px solid var(--border-dim);
             }
-        }
-        
-        @media (max-width: 576px) {
-            .hero {
-                padding: 130px 0 80px;
+
+            .hero-grid h1 {
+                font-size: 38px;
             }
-            
-            .features, .benefits, .testimonials, .pricing, .cta-section {
-                padding: 70px 0;
+
+            .features-grid {
+                grid-template-columns: 1fr;
             }
-            
-            .feature-card, .testimonial {
-                padding: 25px;
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
             }
-            
-            .plan-price {
-                font-size: 36px;
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-closing {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+
+    <!-- Threat Activity Bar -->
+    <div class="threat-ticker">
+        <i class="fas fa-triangle-exclamation" style="color: var(--neon-rose);"></i>
+        <span>ACTIVE GLOBAL MITIGATION: <strong>4.82 Tbps Volumetric Attack Nullified</strong> across 28 PoPs</span>
+    </div>
+
+    <!-- Header Navigation -->
     <header>
         <div class="container">
             <nav>
-                <div class="logo">
-                    <div class="logo-icon"><i class="fas fa-bezier-curve"></i></div>
-                    <div class="logo-text">Code<span>Flow</span></div>
-                </div>
-                
+                <a href="#" class="brand-link">
+                    <div class="brand-crest"><i class="fas fa-shield-virus"></i></div>
+                    <div class="brand-name">Aegis<span>Grid</span></div>
+                </a>
+
                 <ul class="nav-links">
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#">Resources</a></li>
+                    <li><a href="#features">eBPF Kernel</a></li>
+                    <li><a href="#metrics">Benchmarks</a></li>
+                    <li><a href="#testimonials">CISO Proof</a></li>
+                    <li><a href="#pricing">Shield Tiers</a></li>
+                    <li><a href="#">Threat Intel</a></li>
                 </ul>
-                
-                <button class="cta-button">Start Free Trial</button>
-                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+
+                <div class="nav-controls">
+                    <a href="#pricing" class="btn-ghost" style="padding: 9px 18px;">SOC Login</a>
+                    <button class="btn-crimson" onclick="popNotification('Initializing Sovereign Defense Sandbox...')">
+                        <i class="fas fa-shield-halved"></i> Activate Shield
+                    </button>
+                    <button class="mobile-trigger" id="mobileTrigger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -591,17 +1006,55 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Build Apps Faster With <span>Visual Development</span></h1>
-                    <p>CodeFlow empowers teams to create enterprise-grade applications with minimal coding. Drag, drop, and connect components to build powerful web and mobile apps in record time.</p>
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <div class="status-pill">
+                        <span class="pulse-light"></span> 100% Zero-Trust Micro-Segmentation
+                    </div>
+                    <h1>Autonomous <span class="neon-text">Cloud Defense</span> at Kernel Speed</h1>
+                    <p>Stop 0-day exploits, lateral privilege escalation, and multi-terabit volumetric assaults before they penetrate your cloud workloads with invisible eBPF probes.</p>
                     <div class="hero-buttons">
-                        <button class="cta-button">Start Building Free</button>
-                        <button class="secondary-button">Watch Demo</button>
+                        <button class="btn-crimson" onclick="popNotification('Deploying DaemonSet to Kubernetes cluster...')">
+                            <i class="fas fa-terminal"></i> Deploy eBPF Probe
+                        </button>
+                        <a href="#features" class="btn-ghost">
+                            <i class="fas fa-radar"></i> Live Threat Telemetry
+                        </a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="CodeFlow Platform Interface">
+
+                <!-- Tactical Security Radar Terminal -->
+                <div class="radar-terminal">
+                    <div class="terminal-bar">
+                        <div class="terminal-label">
+                            <i class="fas fa-shield-check" style="color: #4ade80;"></i>
+                            <span>PROBE_CORE :: us-west-k8s-mesh</span>
+                        </div>
+                        <span style="font-family: var(--font-mono); font-size: 11px; color: #4ade80;">DEFCON 5 / ALL SHIELDS UP</span>
+                    </div>
+
+                    <div class="incident-card">
+                        <div>
+                            <div style="font-weight: 700; color: #fff;">CVE-2026-4891 Kernel Exploit</div>
+                            <div style="font-size: 11px; color: var(--text-low);">Lateral movement attempt isolated</div>
+                        </div>
+                        <span class="incident-tag">QUARANTINED</span>
+                    </div>
+
+                    <div class="terminal-log-feed">
+                        <div class="log-line">
+                            <span class="log-cyan">[00:38:12]</span>
+                            <span>eBPF bytecode bound to syscalls: sys_execve, sys_bpf</span>
+                        </div>
+                        <div class="log-line">
+                            <span class="log-warn">[00:38:14]</span>
+                            <span>Anomalous DNS tunneling detected (198.51.100.24)</span>
+                        </div>
+                        <div class="log-line">
+                            <span class="log-success">[00:38:14]</span>
+                            <span>Zero-Trust Token Revoked & Container Micro-isolated (0.18ms)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -610,127 +1063,122 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="container">
-            <div class="section-title">
-                <h2>Powerful Features for Rapid Development</h2>
-                <p>CodeFlow provides all the tools you need to build, deploy, and scale applications without writing extensive code.</p>
+            <div class="section-header">
+                <h2>Continuous Posture & Real-Time Immunity</h2>
+                <p>Equip your SecOps and DevOps teams with non-invasive kernel monitoring that replaces traditional heavy agent bloat.</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-th-large"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3>Visual Builder</h3>
-                    <p>Drag and drop UI components to design responsive interfaces. Connect data sources with simple point-and-click actions.</p>
+                    <h3>eBPF Kernel Telemetry</h3>
+                    <p>Observe socket interactions, file system mutations, and process spawns at raw Linux kernel speeds with 0% CPU overhead.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-database"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-lock"></i>
                     </div>
-                    <h3>Database Integration</h3>
-                    <p>Connect to any data source with built-in connectors. Automatically generate CRUD operations without writing SQL.</p>
+                    <h3>Identity-Centric Mesh</h3>
+                    <p>Cryptographic mTLS authentication for every inter-service request. Eliminate blind trust inside internal Kubernetes clusters.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-network-wired"></i>
                     </div>
-                    <h3>Cross-Platform</h3>
-                    <p>Build once, deploy everywhere. Generate applications for web, iOS, and Android from a single visual design.</p>
+                    <h3>Volumetric DDoS Sinkhole</h3>
+                    <p>Multi-terabit distributed scrubbers automatically absorb BGP hijackings and SYN floods within 3 packet roundtrips.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-crosshairs"></i>
                     </div>
-                    <h3>Extensible with Code</h3>
-                    <p>Add custom functionality with JavaScript when needed. Our platform doesn't limit your creativity or complexity.</p>
+                    <h3>Autonomous Decoy Grid</h3>
+                    <p>Deploy synthetic honeypots across idle subnets. Trap malicious lateral scanners and extract attacker TTPs in real-time.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-shield-virus"></i>
                     </div>
-                    <h3>Enterprise Security</h3>
-                    <p>Built-in authentication, authorization, and data encryption. SOC2 compliant with enterprise-grade security features.</p>
+                    <h3>Automated Sandboxing</h3>
+                    <p>Instantly freeze and clone suspicious workloads into forensic microVMs for automated dynamic detonation analysis.</p>
                 </div>
-                
+
                 <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-rocket"></i>
+                    <div class="feature-icon-shield">
+                        <i class="fas fa-key"></i>
                     </div>
-                    <h3>One-Click Deployment</h3>
-                    <p>Deploy to cloud or on-premises with a single click. Automatic scaling and monitoring included.</p>
+                    <h3>Post-Quantum Crypto</h3>
+                    <p>Future-proof your data in flight with NIST-standardized Kyber & Dilithium quantum-resilient cryptographic key encapsulation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="benefits" id="benefits">
+    <!-- Metrics Section -->
+    <section class="metrics" id="metrics">
         <div class="container">
-            <div class="section-title">
-                <h2>Why Choose CodeFlow?</h2>
-                <p>Join thousands of companies accelerating their digital transformation with low-code development.</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>10x Faster Development</h3>
-                    <p>Build applications in days instead of months with visual development tools.</p>
+            <div class="metrics-grid">
+                <div class="metric-cell">
+                    <div class="metric-value neon-text">0.18ms</div>
+                    <h4>Detection Latency</h4>
+                    <p>Instantaneous kernel-level intervention</p>
                 </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>Reduce Costs by 70%</h3>
-                    <p>Lower development and maintenance costs with fewer resources required.</p>
+                <div class="metric-cell">
+                    <div class="metric-value neon-text">4.8 Tbps</div>
+                    <h4>Peak Scrubbing</h4>
+                    <p>World's largest edge mitigation fabric</p>
                 </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Citizen Developers</h3>
-                    <p>Enable business users to build solutions with minimal IT assistance.</p>
+                <div class="metric-cell">
+                    <div class="metric-value neon-text">100%</div>
+                    <h4>Zero-Trust Strictness</h4>
+                    <p>Default-deny security posture</p>
                 </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Scale Effortlessly</h3>
-                    <p>From prototype to enterprise-scale applications with the same platform.</p>
+                <div class="metric-cell">
+                    <div class="metric-value neon-text">0 Breach</div>
+                    <h4>Production Track Record</h4>
+                    <p>Audited by Fortune 50 Red Teams</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
-            <div class="section-title">
-                <h2>Trusted by Industry Leaders</h2>
-                <p>See what our customers have to say about their experience with CodeFlow.</p>
+            <div class="section-header">
+                <h2>Trusted by Fortune 100 CISOs</h2>
+                <p>See why world-class defense contractors, banks, and hyperscalers rely on AegisGrid for sovereign defense.</p>
             </div>
-            
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <div class="testimonial-text">
-                        "CodeFlow transformed how we deliver solutions to our business units. What used to take 6 months now takes 3 weeks. Our development team can focus on complex problems while business teams build their own solutions."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">SC</div>
-                        <div class="author-info">
-                            <h4>Sarah Chen</h4>
-                            <p>CTO, TechGrowth Inc.</p>
+
+            <div class="testimonial-deck">
+                <div class="testimonial-box">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-quote" id="quoteStatement">
+                        "AegisGrid stopped a sophisticated supply-chain injection in our Kubernetes workloads before it could touch customer databases. The eBPF precision is unlike anything on the market."
+                    </p>
+                    <div class="officer-profile">
+                        <div class="officer-badge" id="quoteInitials">VH</div>
+                        <div class="officer-info">
+                            <h5 id="quoteName">Viktor Hauer</h5>
+                            <span id="quotePosition">Chief Information Security Officer, Sovereign Cybernetics</span>
                         </div>
                     </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button class="arrow-button" onclick="slidePrev()"><i class="fas fa-chevron-left"></i></button>
+                    <div class="dots-row">
+                        <div class="dot-node active" onclick="jumpSlide(0)"></div>
+                        <div class="dot-node" onclick="jumpSlide(1)"></div>
+                        <div class="dot-node" onclick="jumpSlide(2)"></div>
+                    </div>
+                    <button class="arrow-button" onclick="slideNext()"><i class="fas fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
@@ -739,228 +1187,259 @@
     <!-- Pricing Section -->
     <section class="pricing" id="pricing">
         <div class="container">
-            <div class="section-title">
-                <h2>Simple, Transparent Pricing</h2>
-                <p>Choose the plan that fits your needs. All plans include core features with no hidden fees.</p>
+            <div class="section-header">
+                <h2>Transparent Shield Pricing</h2>
+                <p>Deploy continuous workload protection with predictable per-node rates and no throughput penalties.</p>
             </div>
-            
+
+            <div class="billing-toggle-shell">
+                <span id="labelMonth" class="active">Monthly Invoicing</span>
+                <div class="toggle-switch-box" id="periodSwitch" onclick="toggleBillingPeriod()">
+                    <div class="toggle-slider"></div>
+                </div>
+                <span id="labelAnnual">Annual Contract <span class="discount-label">Save 20%</span></span>
+            </div>
+
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3 class="plan-name">Starter</h3>
-                    <div class="plan-price">$29<span>/month</span></div>
-                    <ul class="plan-features">
-                        <li>Up to 5 users</li>
-                        <li>10 GB storage</li>
-                        <li>Basic components</li>
-                        <li>Community support</li>
-                        <li>1 production app</li>
+                <!-- Cluster Shield -->
+                <div class="pricing-tier">
+                    <h3 class="tier-title">Cluster Guard</h3>
+                    <p class="tier-purpose">Ideal for startups and growing SaaS infrastructure running up to 50 nodes.</p>
+                    <div class="tier-price-box">
+                        <span class="tier-amount" id="priceCluster">$149</span>
+                        <span class="tier-period">/node/mo</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-shield"></i> Complete eBPF Kernel Visibility</li>
+                        <li><i class="fas fa-shield"></i> Automatic Pod-Level Micro-Segmentation</li>
+                        <li><i class="fas fa-shield"></i> 30-Day Forensic Telemetry Storage</li>
+                        <li><i class="fas fa-shield"></i> Slack & PagerDuty Integration</li>
                     </ul>
-                    <button class="secondary-button">Get Started</button>
+                    <button class="btn-ghost" style="width: 100%; justify-content: center;" onclick="popNotification('Selected Cluster Guard Tier')">Deploy Cluster Agent</button>
                 </div>
-                
-                <div class="pricing-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <h3 class="plan-name">Professional</h3>
-                    <div class="plan-price">$89<span>/month</span></div>
-                    <ul class="plan-features">
-                        <li>Up to 25 users</li>
-                        <li>100 GB storage</li>
-                        <li>All components</li>
-                        <li>Priority support</li>
-                        <li>10 production apps</li>
-                        <li>Custom branding</li>
+
+                <!-- Featured Sovereign Shield -->
+                <div class="pricing-tier featured">
+                    <div class="hot-shield-tag">Enterprise Standard</div>
+                    <h3 class="tier-title">Sovereign Mesh</h3>
+                    <p class="tier-purpose">Comprehensive threat hunting and automated sandboxing for multi-cloud fleets.</p>
+                    <div class="tier-price-box">
+                        <span class="tier-amount neon-text" id="priceMesh">$399</span>
+                        <span class="tier-period">/node/mo</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-shield"></i> Unlimited eBPF Nodes & Clusters</li>
+                        <li><i class="fas fa-shield"></i> Autonomous AI Threat Hunting & Decoys</li>
+                        <li><i class="fas fa-shield"></i> Real-time Quantum-Resilient WireGuard Mesh</li>
+                        <li><i class="fas fa-shield"></i> 24/7 Dedicated Threat Intelligence Desk</li>
+                        <li><i class="fas fa-shield"></i> Sub-second Dynamic Sandbox Detonation</li>
                     </ul>
-                    <button class="cta-button">Try Free for 14 Days</button>
+                    <button class="btn-crimson" style="width: 100%; justify-content: center;" onclick="popNotification('Selected Sovereign Mesh Tier')">Start 14-Day Free Trial</button>
                 </div>
-                
-                <div class="pricing-card">
-                    <h3 class="plan-name">Enterprise</h3>
-                    <div class="plan-price">Custom</div>
-                    <ul class="plan-features">
-                        <li>Unlimited users</li>
-                        <li>Unlimited storage</li>
-                        <li>All features included</li>
-                        <li>24/7 dedicated support</li>
-                        <li>Unlimited apps</li>
-                        <li>On-premises option</li>
+
+                <!-- Custom SOC Defense -->
+                <div class="pricing-tier">
+                    <h3 class="tier-title">Defense Prime</h3>
+                    <p class="tier-purpose">Air-gapped on-premises deployments for defense contractors and government bodies.</p>
+                    <div class="tier-price-box">
+                        <span class="tier-amount">Custom</span>
+                    </div>
+                    <ul class="tier-features">
+                        <li><i class="fas fa-shield"></i> Air-gapped Sovereign Appliance</li>
+                        <li><i class="fas fa-shield"></i> Custom Kernel Patch Modules</li>
+                        <li><i class="fas fa-shield"></i> FedRAMP High & IL5 Compliance</li>
+                        <li><i class="fas fa-shield"></i> Dedicated On-Site Red Team Architect</li>
                     </ul>
-                    <button class="secondary-button">Contact Sales</button>
+                    <button class="btn-ghost" style="width: 100%; justify-content: center;" onclick="popNotification('Contacted Federal & Defense Desk')">Schedule Clearance Briefing</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Start Building Today</h2>
-            <p>Join over 10,000 companies that use CodeFlow to accelerate their application development. No credit card required for the free trial.</p>
-            <button class="cta-button">Get Started for Free</button>
-        </div>
-    </section>
+    <!-- Call to Action Banner -->
+    <div class="container">
+        <section class="cta-shield-banner">
+            <h2>Harden Your Workloads Against Modern Exploits</h2>
+            <p>Deploy invisible eBPF security across your entire Kubernetes fleet in under 5 minutes with a single Helm chart command.</p>
+            <button class="btn-crimson" style="font-size: 15px; padding: 14px 38px;" onclick="popNotification('Opening Helm Quickstart Documentation...')">
+                <i class="fas fa-shield-virus"></i> Deploy Zero-Trust Shield Now
+            </button>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <div class="logo">
-                        <div class="logo-icon"><i class="fas fa-bezier-curve"></i></div>
-                        <div class="logo-text">Code<span>Flow</span></div>
-                    </div>
-                    <p style="margin-top: 20px; color: #aaa;">The leading visual development platform for building enterprise applications with minimal coding.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="brand-link">
+                        <div class="brand-crest"><i class="fas fa-shield-virus"></i></div>
+                        <div class="brand-name">Aegis<span>Grid</span></div>
+                    </a>
+                    <p>The sovereign zero-trust cloud immune system engineered for zero lateral traversal and instant kernel-level protection.</p>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Product</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Use Cases</a></li>
-                        <li><a href="#">Integrations</a></li>
-                        <li><a href="#">Roadmap</a></li>
+
+                <div class="footer-nav-col">
+                    <h4>Defense Mesh</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">eBPF Sensor Architecture</a></li>
+                        <li><a href="#">Post-Quantum Tunneling</a></li>
+                        <li><a href="#">Kubernetes DaemonSet</a></li>
+                        <li><a href="#">Deception Decoy Network</a></li>
+                        <li><a href="#">Global Scrubbing Centers</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Resources</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">Tutorials</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Support</a></li>
+
+                <div class="footer-nav-col">
+                    <h4>Threat Intel</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">0-Day Advisory Feed</a></li>
+                        <li><a href="#">MITRE ATT&CK Mapping</a></li>
+                        <li><a href="#">Live Attack Map</a></li>
+                        <li><a href="#">SOC2 Compliance Guide</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-column">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+
+                <div class="footer-nav-col">
+                    <h4>Compliance & Trust</h4>
+                    <ul class="footer-nav-list">
+                        <li><a href="#">SOC2 Type II Certified</a></li>
+                        <li><a href="#">FedRAMP Ready</a></li>
+                        <li><a href="#">ISO 27001 Standard</a></li>
+                        <li><a href="#">Responsible Disclosure</a></li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 CodeFlow. All rights reserved.</p>
+
+            <div class="footer-closing">
+                <div>&copy; 2026 AegisGrid Cyber Defense Corp. All rights reserved.</div>
+                <div>SECURE CRYPTOGRAPHIC ENCLAVE ACTIVE.</div>
             </div>
         </div>
     </footer>
 
+    <!-- Toast Notification Box -->
+    <div class="toast-terminal" id="toastDisplay">
+        <i class="fas fa-shield-halved" style="color: var(--neon-rose);"></i>
+        <span id="toastContent">Operation dispatched</span>
+    </div>
+
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            
-            // Adjust for mobile
-            if (window.innerWidth <= 768) {
-                if (navLinks.style.display === 'flex') {
-                    navLinks.style.flexDirection = 'column';
-                    navLinks.style.position = 'absolute';
-                    navLinks.style.top = '80px';
-                    navLinks.style.left = '0';
-                    navLinks.style.width = '100%';
-                    navLinks.style.backgroundColor = 'white';
-                    navLinks.style.padding = '20px';
-                    navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-                    
-                    const navItems = document.querySelectorAll('.nav-links li');
-                    navItems.forEach(item => {
-                        item.style.margin = '10px 0';
-                    });
-                }
-            }
+        // Mobile Menu Drawer
+        const mobileTrigger = document.getElementById('mobileTrigger');
+        const navMenu = document.querySelector('.nav-links');
+
+        mobileTrigger.addEventListener('click', () => {
+            navMenu.classList.toggle('mobile-open');
         });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if(window.innerWidth <= 768) {
-                        document.querySelector('.nav-links').style.display = 'none';
-                    }
-                }
+
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => {
+                navMenu.classList.remove('mobile-open');
             });
         });
-        
-        // Simple testimonial slider
-        const testimonials = [
+
+        // Billing Cycle Toggle (Monthly vs Annual with 20% discount)
+        let isAnnualRate = false;
+        const periodSwitch = document.getElementById('periodSwitch');
+        const labelMonth = document.getElementById('labelMonth');
+        const labelAnnual = document.getElementById('labelAnnual');
+        const priceCluster = document.getElementById('priceCluster');
+        const priceMesh = document.getElementById('priceMesh');
+
+        function toggleBillingPeriod() {
+            isAnnualRate = !isAnnualRate;
+            periodSwitch.classList.toggle('annual', isAnnualRate);
+            labelMonth.classList.toggle('active', !isAnnualRate);
+            labelAnnual.classList.toggle('active', isAnnualRate);
+
+            if (isAnnualRate) {
+                priceCluster.textContent = '$119';
+                priceMesh.textContent = '$319';
+            } else {
+                priceCluster.textContent = '$149';
+                priceMesh.textContent = '$399';
+            }
+        }
+
+        // Testimonial Carousel Data & Logic
+        const securityTestimonials = [
             {
-                text: "CodeFlow transformed how we deliver solutions to our business units. What used to take 6 months now takes 3 weeks. Our development team can focus on complex problems while business teams build their own solutions.",
-                name: "Sarah Chen",
-                position: "CTO, TechGrowth Inc.",
-                initials: "SC"
+                quote: "AegisGrid stopped a sophisticated supply-chain injection in our Kubernetes workloads before it could touch customer databases. The eBPF precision is unlike anything on the market.",
+                author: "Viktor Hauer",
+                role: "Chief Information Security Officer, Sovereign Cybernetics",
+                avatar: "VH"
             },
             {
-                text: "We reduced our app development time by 80% using CodeFlow. The visual interface made it easy for our analysts to build data dashboards without waiting for IT resources.",
-                name: "Marcus Johnson",
-                position: "Director of Operations, DataCorp",
-                initials: "MJ"
+                quote: "During a massive 3.6 Tbps DDoS extortion campaign, AegisGrid's distributed scrubbing mesh absorbed the traffic with zero degradation in our trading API latency.",
+                author: "Evelyn Reed",
+                role: "VP of Cloud Infrastructure, Apex Capital Markets",
+                avatar: "ER"
             },
             {
-                text: "As a non-technical founder, CodeFlow allowed me to build our MVP in just 2 months. I could test ideas quickly and iterate based on user feedback without deep coding knowledge.",
-                name: "Lisa Wang",
-                position: "Founder, StartupLabs",
-                initials: "LW"
+                quote: "Replacing our legacy kernel-agent bloat with AegisGrid cut our compute overhead by 12% while giving us unprecedented visibility into unauthorized microservice RPCs.",
+                author: "Kenjiro Sato",
+                role: "Head of Infrastructure Security, NeoTokyo Gaming Cloud",
+                avatar: "KS"
             }
         ];
-        
-        let currentTestimonial = 0;
-        const testimonialElement = document.querySelector('.testimonial');
-        
-        function rotateTestimonial() {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial();
-        }
-        
-        function updateTestimonial() {
-            const testimonial = testimonials[currentTestimonial];
-            testimonialElement.innerHTML = `
-                <div class="testimonial-text">"${testimonial.text}"</div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">${testimonial.initials}</div>
-                    <div class="author-info">
-                        <h4>${testimonial.name}</h4>
-                        <p>${testimonial.position}</p>
-                    </div>
-                </div>
-            `;
-        }
-        
-        // Auto-rotate testimonials every 5 seconds
-        setInterval(rotateTestimonial, 5000);
-        
-        // CTA button interactions
-        document.querySelectorAll('.cta-button').forEach(button => {
-            button.addEventListener('click', function() {
-                alert('Thank you for your interest in CodeFlow! You would be redirected to the signup page in a real implementation.');
+
+        let currentReviewIndex = 0;
+        const quoteStatement = document.getElementById('quoteStatement');
+        const quoteName = document.getElementById('quoteName');
+        const quotePosition = document.getElementById('quotePosition');
+        const quoteInitials = document.getElementById('quoteInitials');
+        const dotNodes = document.querySelectorAll('.dots-row .dot-node');
+
+        function renderTestimonialCard(index) {
+            currentReviewIndex = index;
+            const item = securityTestimonials[index];
+
+            quoteStatement.style.opacity = '0';
+            setTimeout(() => {
+                quoteStatement.textContent = `"${item.quote}"`;
+                quoteName.textContent = item.author;
+                quotePosition.textContent = item.role;
+                quoteInitials.textContent = item.avatar;
+                quoteStatement.style.opacity = '1';
+            }, 180);
+
+            dotNodes.forEach((node, i) => {
+                node.classList.toggle('active', i === index);
             });
-        });
-        
-        // Pricing card interactions
-        document.querySelectorAll('.pricing-card button').forEach(button => {
-            button.addEventListener('click', function() {
-                const planName = this.closest('.pricing-card').querySelector('.plan-name').textContent;
-                alert(`You selected the ${planName} plan. In a real implementation, you would be redirected to the checkout process.`);
-            });
-        });
+        }
+
+        function slideNext() {
+            let next = (currentReviewIndex + 1) % securityTestimonials.length;
+            renderTestimonialCard(next);
+        }
+
+        function slidePrev() {
+            let prev = (currentReviewIndex - 1 + securityTestimonials.length) % securityTestimonials.length;
+            renderTestimonialCard(prev);
+        }
+
+        function jumpSlide(i) {
+            renderTestimonialCard(i);
+        }
+
+        // Auto slide testimonials every 5.5 seconds
+        setInterval(slideNext, 5500);
+
+        // Toast Feedback System
+        const toastDisplay = document.getElementById('toastDisplay');
+        const toastContent = document.getElementById('toastContent');
+        let toastTimeoutId;
+
+        function popNotification(message) {
+            clearTimeout(toastTimeoutId);
+            toastContent.textContent = message;
+            toastDisplay.classList.add('visible');
+            toastTimeoutId = setTimeout(() => {
+                toastDisplay.classList.remove('visible');
+            }, 3000);
+        }
     </script>
 </body>
 </html>
+```
